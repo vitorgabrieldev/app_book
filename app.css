@@ -2,6 +2,8 @@ body, hmtl {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    overflow-x: hidden;
 }
 
 /* --- Header * Add * Books ---- */
@@ -13,13 +15,12 @@ body, hmtl {
     padding: 0 0 0 2rem;
 }
 
-/* #form_container label {
-    color: #fefefe;
-    font-size: 2rem;
-    font-family: monospace;
-    letter-spacing: .1rem;
-    margin: 0 2rem 0 0;
-} */
+#form_container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+
 
 #form_container input {
     background: transparent;
@@ -27,7 +28,7 @@ body, hmtl {
     outline: none;
     border-bottom: 1px solid #fefefe;
     padding: .3rem;
-    width: 250px;
+    width: 40%;
     font-size: 1.3rem;
     color: #fefefe;
 }
@@ -54,8 +55,13 @@ body, hmtl {
 
 
 #list_books li {
-    list-style-type: a;
+    list-style-type: none;
     font-family: monospace;
     letter-spacing: .1rem;
     font-size: 1.5rem;
+
+    background: rgb(214, 214, 214);
+    padding: .8rem;
+    border-radius: 12px;
+    margin: .5rem;
 }
