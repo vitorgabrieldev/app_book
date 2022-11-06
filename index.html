@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+
+    <title>App Books</title>
+
+    <!-- --- Require * Meta * Tags ---- -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books list</title>
+
+    <!-- --- Style Sheets --- -->
+    <link rel="stylesheet" href="./app.css">
+
 </head>
 <body>
-    <form id="form_container">
-        <label for="book">Nome do livro</label>
-        <input type="text" placeholder="Digite o nome do livro" id="book">
-        <button type="submit">Enviar</button>
-    </form>
+    <!-- --- Components --- -->
+    <header class="container_header">
+        <form id="form_container">
+            <input type="text" placeholder="Digite o nome do livro, author..." id="book">
+            <button type="submit">Adicionar</button>
+        </form>
+    </header>
+    <section class="container_main">
+        <section class="container_listBooks">
+            <ul id="list_books"></ul>
+        </section>
+    </section>
 
-    <ul id="list_books"></ul>
-
-
+    <!-- --- Scripts * Controlls --- -->
     <script src="./app.js"></script>
 
 </body>

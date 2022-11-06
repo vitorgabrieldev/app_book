@@ -1,0 +1,61 @@
+body, hmtl {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Header * Add * Books ---- */
+.container_header {
+    background: rgb(54, 51, 51);
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 2rem;
+}
+
+/* #form_container label {
+    color: #fefefe;
+    font-size: 2rem;
+    font-family: monospace;
+    letter-spacing: .1rem;
+    margin: 0 2rem 0 0;
+} */
+
+#form_container input {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fefefe;
+    padding: .3rem;
+    width: 250px;
+    font-size: 1.3rem;
+    color: #fefefe;
+}
+
+#form_container button {
+    border: none;
+    background: #fefefe;
+    border-radius: 1.7rem;
+    border: .3rem;
+    padding: .8rem;
+    font-size: 1.3rem;
+    margin: 0 0 0 2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#form_container button:hover {
+    background: rgb(223, 223, 223);
+}
+
+.container_main {
+    padding: 2rem;
+}
+
+
+#list_books li {
+    list-style-type: a;
+    font-family: monospace;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+}

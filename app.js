@@ -25,15 +25,36 @@ const addBook = {
         array_books.push(book);
         document.querySelector('#book').value = "";
         
-        this.createList(book);
+        // --- Get Hours ---
+        // this.getHours();
+
+        let info = {
+            book: book,
+            timer: this.getHours(),
+        };
+
+        this.createList(info);
         
     },
 
-    createList: function(book) {
+    createList: function(info) {
         let element = document.createElement('li');
         let tag_father = document.querySelector('#list_books');
-        var txt  = document.createTextNode(book);
+        var txt  = document.createTextNode(`${info.book} - ${info.timer}`);
         element.appendChild(txt);
         tag_father.appendChild(element);
+    },
+
+    getHours: function() {
+        let hours = new Date().getHours();
+        let minutes = new Date().getMinutes();
+        let day_element = new Date().getDate();
+        let mounth = new Date().getMonth();
+
+        day = (day_element < 10 ? '0' + day_element : day_element);
+
+        let timer = `${day}/${mounth} - ${hours}:${minutes}`;
+
+        return timer;
     },
 };
