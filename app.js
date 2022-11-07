@@ -6,55 +6,55 @@ document.querySelector('#form_container').addEventListener('submit', (e) => {
 
 window.addEventListener('keypress', (e) => {
     if(e.key === 'Enter') {
+        e.preventDefault();
         addBook.verification();
-    }
+    };
 });
 
 // *** array Books Locate ***
 var array_books = [];
+var token_item_list = 0;
 
 
 const addBook = {
     verification: function() {
         var book = document.querySelector('#book').value;
+        // --- * --- Validation books --- * --- 
         if(book) {
             this.addBook(book);
-        }
+        };
     },
     addBook: function(book) {
+        // --- * --- Add element array --- * --- 
         array_books.push(book);
         document.querySelector('#book').value = "";
         
-        // --- Get Hours ---
-        // this.getHours();
-
+        // --- * --- Get Hours --- * ---
         let info = {
             book: book,
             timer: this.getHours(),
         };
-
-        this.createList(info);
-        
+        this.createList(info);   
     },
 
     createList: function(info) {
-        let element = document.createElement('li');
-        let tag_father = document.querySelector('#list_books');
-        var txt  = document.createTextNode(`${info.book} - ${info.timer}`);
-        element.appendChild(txt);
-        tag_father.appendChild(element);
+        // --- * --- Create list tags --- * --- 
+        $("#list_books").append(`<li class="item_list"><p>${info.book}</p><p data-id="${token_item_list}">Adicionado: ${info.timer}</p></li>`);
+        // --- * --- Add -> 1 <- token_item_list --- * --- 
+        token_item_list++;
     },
 
     getHours: function() {
+        // --- * --- Get Hours --- * --- 
         let hours = new Date().getHours();
         let minutes = new Date().getMinutes();
         let day_element = new Date().getDate();
         let mounth = new Date().getMonth();
 
         day = (day_element < 10 ? '0' + day_element : day_element);
-
         let timer = `${day}/${mounth} - ${hours}:${minutes}`;
 
+        // --- * --- Return Function = Date/Timer --- * --- 
         return timer;
     },
 };
