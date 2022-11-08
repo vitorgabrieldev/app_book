@@ -47,10 +47,6 @@ const addBook = {
         token_item_list++;
     },
 
-    btn_hidden_timer: function() {
-        console.log('Hello, World')
-    },
-
     getHours: function() {
         // --- * --- Get Hours --- * --- 
         let hours = new Date().getHours();
