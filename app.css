@@ -59,7 +59,6 @@ body, hmtl {
     font-family: monospace;
     letter-spacing: .1rem;
     font-size: 1.5rem;
-
     background: rgba(214, 214, 214, 0.264);
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.262);
     padding: 0 2rem 0 2rem;
@@ -84,4 +83,17 @@ body, hmtl {
     background: rgba(33, 32, 32, 0.095);
     padding: .4rem;
     border-radius: 1.7rem;
+}
+
+
+@media screen and (max-width: 830px) {
+    * {
+        font-size: 90%;
+    }
+    .item_list {
+        display: block;
+    }
+    #list_books li {
+        padding: .3rem;
+    }
 }
