@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 
-    <title>App Books</title>
+    <title>App Books - Adicione seus livros favoritos</title>
 
     <!-- --- Require * Meta * Tags ---- -->
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./app.css">
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 
 </head>
@@ -21,7 +22,9 @@
     <header class="container_header">
         <form id="form_container">
             <input maxlength="15" type="text" placeholder="Digite o nome do livro, author..." id="book">
-            <button type="submit">Adicionar</button>
+            <button type="submit">
+                <i class="bi bi-plus-circle-fill"></i>
+            </button>
         </form>
     </header>
     <section class="container_main">

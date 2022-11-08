@@ -11,6 +11,9 @@ window.addEventListener('keypress', (e) => {
     };
 });
 
+// --- * --- Call Hidden timer item list --- * ---
+
+
 // *** array Books Locate ***
 var array_books = [];
 var token_item_list = 0;
@@ -39,9 +42,13 @@ const addBook = {
 
     createList: function(info) {
         // --- * --- Create list tags --- * --- 
-        $("#list_books").append(`<li class="item_list"><p>${info.book}</p><p data-id="${token_item_list}">Adicionado: ${info.timer}</p></li>`);
+        $("#list_books").append(`<li class="item_list"><p>${info.book}</p><p class="btn_hidden_timer" data-id="${token_item_list}">Adicionado: ${info.timer}</p></li>`);
         // --- * --- Add -> 1 <- token_item_list --- * --- 
         token_item_list++;
+    },
+
+    btn_hidden_timer: function() {
+        console.log('Hello, World')
     },
 
     getHours: function() {
