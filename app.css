@@ -88,6 +88,9 @@ body, hmtl {
     border-radius: 1.7rem;
 }
 
+.btn_hidden {
+    color: red;
+}
 
 @media screen and (max-width: 830px) {
     * {

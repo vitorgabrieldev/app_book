@@ -42,7 +42,7 @@ const addBook = {
 
     createList: function(info) {
         // --- * --- Create list tags --- * --- 
-        $("#list_books").append(`<li class="item_list"><p>${info.book}</p><p class="btn_hidden_timer" data-id="${token_item_list}">Adicionado: ${info.timer}</p></li>`);
+        $("#list_books").append(`<li class="item_list"><p>${info.book}</p><p class="show_btn" onclick="hiddenShow(${token_item_list})" data-id="${token_item_list}">Adicionado: ${info.timer}</p></li>`);
         // --- * --- Add -> 1 <- token_item_list --- * --- 
         token_item_list++;
     },
@@ -60,4 +60,10 @@ const addBook = {
         // --- * --- Return Function = Date/Timer --- * --- 
         return timer;
     },
+};
+
+
+function hiddenShow(atrib) {
+    let element_tep = document.querySelector('.show_btn');
+    console.log(atrib);
 };
