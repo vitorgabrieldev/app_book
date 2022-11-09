@@ -74,20 +74,44 @@ body, hmtl {
     justify-content: space-between;
 }
 
-.item_list p:nth-child(2) {
-    background: rgba(33, 32, 32, 0.095);
+.timer_container {
     padding: .3rem 1.5rem .3rem 1.5rem;
     border-radius: 1.7rem;
     cursor: pointer;
+    transform: scale(.8);
+    user-select: none;
 }
 
-.item_list p:first-child {
+.name_book {
     font-weight: 500;
-    background: rgba(33, 32, 32, 0.095);
+    background: rgba(33, 32, 32, 0.049);
     padding: .4rem;
-    border-radius: 1.7rem;
+    border-radius: 8px;
 }
 
+.container_function {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+/* --- * --- ClassName Hidden and Show Item List --- * --- */
+.showHidden {
+    display: none;
+}
+
+
+.svg_js {
+    margin-top: 2%;
+    cursor: pointer;
+    padding: .3rem;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.svg_js:hover {
+    background: rgba(178, 178, 178, 0.499);
+}
 
 @media screen and (max-width: 830px) {
     * {
