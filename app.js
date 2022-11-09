@@ -17,6 +17,7 @@ window.addEventListener('keypress', (e) => {
 // *** array Books Locate ***
 var array_books = [];
 var token_item_list = 0;
+var books_selects = ['Admin'];
 
 
 const addBook = {
@@ -44,6 +45,7 @@ const addBook = {
         // --- * --- Create list tags --- * --- 
         $("#list_books").append(`
         <li class="item_list">
+            <input type="checkbox" name="select" class="select_book" onclick="controlls_item.select(${token_item_list})">
             <p class="name_book">${info.book}</p>
             <section class="container_function">
                 <p class="timer_container" data-id="${token_item_list}">${info.timer}</p>
@@ -82,5 +84,13 @@ const controlls_item = {
     config: function(data) {
         let tag = document.getElementsByTagName('li')[data];
         console.log(tag);
+    },
+    select: function(data) {
+        let tag_secondary = document.getElementsByTagName('li')[data];
+        let tag = tag_secondary.querySelector('.name_book');
+        let book_name = tag.innerText;
+        books_selects.forEach(element => {
+            console.log(element);
+        });
     },
 };

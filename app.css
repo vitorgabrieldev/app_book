@@ -3,6 +3,8 @@ body, hmtl {
     padding: 0;
     box-sizing: border-box;
 
+    background: rgb(248, 247, 247);
+
     overflow-x: hidden;
 }
 
@@ -113,6 +115,17 @@ body, hmtl {
     background: rgba(178, 178, 178, 0.499);
 }
 
+
+
+
+
+
+
+
+
+
+
+/* --- * --- Responsivo --- * --- */
 @media screen and (max-width: 830px) {
     * {
         font-size: 90%;
