@@ -115,15 +115,11 @@ body, hmtl {
     background: rgba(178, 178, 178, 0.499);
 }
 
-
-
-
-
-
-
-
-
-
+.counter_selects {
+    color: #fefefe;
+    font-family: monospace;
+    margin-left: 8rem;
+}
 
 /* --- * --- Responsivo --- * --- */
 @media screen and (max-width: 830px) {

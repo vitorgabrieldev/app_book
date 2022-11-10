@@ -17,7 +17,7 @@ window.addEventListener('keypress', (e) => {
 // *** array Books Locate ***
 var array_books = [];
 var token_item_list = 0;
-var books_selects = ['Admin'];
+var books_selects = [];
 
 
 const addBook = {
@@ -79,6 +79,15 @@ const controlls_item = {
         let confirm_delete = window.confirm("Deseja excluir este livro");
         if(confirm_delete == true) {
             document.querySelector('.item_list').remove(tag);
+
+            let tagx = tag.querySelector('.name_book');
+            let counter_selects = document.querySelector('.counter_selects');
+            let book_name = tagx.innerText;
+
+            let element_remove = books_selects.indexOf(book_name);
+            books_selects.splice(element_remove, 1);
+            counter_selects.innerHTML = `${books_selects.length} Selecionado`;
+            console.log(books_selects);
         };
     },
     config: function(data) {
@@ -87,10 +96,25 @@ const controlls_item = {
     },
     select: function(data) {
         let tag_secondary = document.getElementsByTagName('li')[data];
+        console.log(data)
         let tag = tag_secondary.querySelector('.name_book');
+        let checkBox = tag_secondary.querySelector('.select_book');
+        let counter_selects = document.querySelector('.counter_selects');
         let book_name = tag.innerText;
-        books_selects.forEach(element => {
-            console.log(element);
-        });
+        
+        // --- * --- Verification * Checked --- * ---
+        if(checkBox.checked) {
+            books_selects.push(book_name);
+            counter_selects.innerHTML = `${books_selects.length} Selecionado`;
+            console.log(books_selects);
+        } else {
+            let element_remove = books_selects.indexOf(book_name);
+            console.log(element_remove);
+            books_selects.splice(element_remove, 1);
+            counter_selects.innerHTML = `${books_selects.length} Selecionado`;
+            console.log(books_selects);
+        };
     },
+
+
 };
